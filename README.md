@@ -4,7 +4,7 @@ A simple UI demonstrating the objectives of the LTX team and their progress
 
 ## How to setup
 
-```
+```bash
 # Clone this repository
 $ git clone ...
 
