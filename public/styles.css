@@ -1,0 +1,266 @@
+/* VARIABLES */
+:root {
+    /* colors */
+    --color-red-dark: #ff000080;
+    --color-orange-dark: #ff77005e;
+    --color-red-vibrant: #ff0000;
+    --color-orange-vibrant: #ff7700;
+    --text-color-white: #ffffff;
+    --secondary-color-black: #010108;
+    /* gradients */
+    --radial-gradient-red: radial-gradient(circle at 0 0, var(--color-red-dark), transparent 40%);
+    --radial-gradient-orange: radial-gradient(circle at 100% 0, var(--color-orange-dark), transparent 40%);
+    /* sizes */
+    --header-height: 4rem;
+    /* borders */
+    --tab-bar-background: linear-gradient(90deg, rgba(255, 255, 255, 0.50) -1.52%, rgba(0, 0, 0, 0.00) 109.98%);
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+h3,
+h4 {
+    max-width: 30ch;
+    text-wrap: balance;
+}
+
+p,
+li {
+    max-width: 50ch;
+    text-wrap: prettu;
+}
+
+/* SCROLL BEHAVIOUR */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+/* BODY */
+body {
+    min-height: 100svh;
+    font-family: Inter, sans-serif;
+    overflow-x: hidden;
+    background-color: var(--secondary-color-black);
+    color: var(--text-color-white);
+
+}
+
+header,
+section {
+    margin: 0 8%;
+}
+
+/* HERO */
+#hero {
+    height: 100vh;
+    padding-top: 10vh;
+    gap: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero__text {
+    max-width: 800px;
+    line-height: 1.2;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* arrows */
+.hero__scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero__arrows {
+    width: 60px;
+    height: 72px;
+    margin-top: 1.5rem;
+}
+
+.arrow {
+    stroke: var(--color-red-dark);
+    fill: transparent;
+    stroke-width: 2px;
+    -webkit-animation: arrow 2s infinite;
+    animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.arrow-1 {
+    animation-delay: -1s;
+}
+
+.arrow-2 {
+    animation-delay: -0.5s;
+}
+
+/* GRADIENTS */
+.background-gradient {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-image: var(--radial-gradient-red), var(--radial-gradient-orange);
+}
+
+#mouse-follower {
+    position: fixed;
+    z-index: -1;
+    height: 200px;
+    width: 200px;
+    background-image: radial-gradient(var(--color-red-dark), transparent 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transform: translate(-50%, -50%);
+    filter: blur(100px);
+}
+
+body:hover #mouse-follower {
+    opacity: 1;
+}
+
+.text-gradient {
+    /* fallback */
+    color: #fff;
+    background: linear-gradient(236deg, var(--color-red-vibrant) 20.53%, var(--color-orange-vibrant) 86.31%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* TAB BOILERPLATE */
+.tab {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.tab-info {
+    display: flex;
+}
+
+.tab-digit,
+.tab-text {
+    font-size: 1rem;
+    font-weight: 400;
+    width: max-content;
+    padding-right: 1rem;
+}
+
+.tab-text {
+    padding-left: 1rem;
+}
+
+.tab-digit {
+    border-right: solid 1px var(--text-color-white);
+}
+
+.tab-bar {
+    height: 1.5px;
+    width: 100%;
+    background: var(--tab-bar-background);
+}
+
+/* TAB Text */
+.tab-text {
+    margin-left: 5%;
+    margin-bottom: 6rem;
+}
+
+.text-big {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.text-small {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+/* ABOUT */
+.about__tab-digit {
+    color: var(--color-red-dark);
+    border-color: var(--color-red-dark);
+}
+
+.about__visuals {
+    margin-left: 5%;
+}
+
+.visuals-image-wrapper {
+    width: 519.951px;
+    height: 340.517px;
+    transform: rotate(176.092deg);
+    flex-shrink: 0;
+}
+
+.visuals-image {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+/* TEST CSS */
+.content {
+    height: 100vh;
+    background-color: aqua;
+}

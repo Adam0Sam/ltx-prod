@@ -3,19 +3,70 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <link rel="manifest" href="manifest.json" />
     <title>LTX</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
     </style>
-    <script src="dist/bundle.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="bundle.js" defer></script>
 </head>
 
 <body>
-
+    <div class="background-gradient"></div>
+    <div id="mouse-follower"></div>
+    <section id="hero">
+        <h1 class="hero__text">
+            Welcome to <span class='text-gradient'>LTX Robotics</span>,
+            leading the way in the future of robotics
+        </h1>
+        <div class="hero__scroll">
+            <p class="scroll-text">Scroll down to learn more</p>
+            <a href="#about">
+                <svg class="hero__arrows">
+                    <path class="arrow arrow-1" d="M0 0 L30 32 L60 0"></path>
+                    <path class="arrow arrow-2" d="M0 20 L30 52 L60 20"></path>
+                    <path class="arrow arrow-3" d="M0 40 L30 72 L60 40"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+    <section id="about">
+        <div>
+            <div class="tab about__tab">
+                <div class="tab-info">
+                    <p class="tab-digit about__tab-digit">01</p>
+                    <p class="tab-text about__tab-text">WHO WE ARE</p>
+                </div>
+                <div class="tab-bar about__tab-bar"></div>
+            </div>
+        </div>
+        <div class="tab-text about__text">
+            <h3 class="text-big about__text-big">
+                We are a <span class="text-gradient">group of experts</span> looking to help companies leverage
+                technology to do more than they had ever
+                thought possible.
+            </h3>
+            <p class="text-small about__text-small">
+                We do this through a number of services to provide comprehensive solutions for your business. Scroll
+                down to read about what we can do for you.
+            </p>
+        </div>
+        <div class="about__visuals">
+            <div class="visuals__left">
+                <div class="visuals-image-wrapper">
+                    <div class="visuals-image">
+                        <img src='./images/Rectangle 7.png' alt="">
+                    </div>
+                </div>
+            </div>
+            <div class=" visuals__right">
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

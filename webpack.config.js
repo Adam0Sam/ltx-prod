@@ -6,18 +6,19 @@ module.exports = {
   entry: "./js/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "./public"),
   },
-  rules: [
-    {
-      test: /\.(?:js|mjs|cjs)$/,
-      exclude: /node_modules/,
-      use: {
-        loader: "babel-loader",
-        options: {
-          presets: [["@babel/preset-env", { targets: "defaults" }]],
-        },
-      },
-    },
-  ],
+  // how to use babel-loader with webpack?
+  // rules: [
+  //   {
+  //     test: /\.(?:js|mjs|cjs)$/,
+  //     exclude: /node_modules/,
+  //     use: {
+  //       loader: "babel-loader",
+  //       options: {
+  //         presets: [["@babel/preset-env", { targets: "defaults" }]],
+  //       },
+  //     },
+  //   },
+  // ],
 };
