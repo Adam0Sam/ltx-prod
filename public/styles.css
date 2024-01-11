@@ -280,6 +280,13 @@ body:hover #mouse-follower {
 
 }
 
+/* WORK */
+.work__h-tab {
+    flex-direction: row-reverse;
+}
+
+.work__tab-bar
+
 /* TEST CSS */
 .content {
     height: 100vh;
