@@ -7,8 +7,12 @@ const loadMouseFollower = () => {
   });
 };
 
+// #todo: add event listeners for the scroll so that scroll-snap works smoothly
+const loadEventListeners = () => {};
+
 const loadPage = () => {
   loadMouseFollower();
+  loadEventListeners();
 };
 
 document.addEventListener("DOMContentLoaded", loadPage);
