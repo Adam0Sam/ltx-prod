@@ -10,6 +10,7 @@
     /* gradients */
     --radial-gradient-red: radial-gradient(circle at 0 0, var(--color-red-dark), transparent 40%);
     --radial-gradient-orange: radial-gradient(circle at 100% 0, var(--color-orange-dark), transparent 40%);
+    --vib-red-to-vib-orange-gradient: linear-gradient(236deg, var(--color-red-vibrant) 20.53%, var(--color-orange-vibrant) 86.31%);
     /* sizes */
     --header-height: 4rem;
     /* borders */
@@ -179,39 +180,39 @@ body:hover #mouse-follower {
 .text-gradient {
     /* fallback */
     color: #fff;
-    background: linear-gradient(236deg, var(--color-red-vibrant) 20.53%, var(--color-orange-vibrant) 86.31%);
+    background: var(--vib-red-to-vib-orange-gradient);
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 /* TAB BOILERPLATE */
-.tab {
+.h-tab {
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
 }
 
-.tab-info {
+.h-tab-info {
     display: flex;
 }
 
-.tab-digit,
-.tab-text {
+.h-tab-digit,
+.h-tab-text {
     font-size: 1rem;
     font-weight: 400;
     width: max-content;
     padding-right: 1rem;
 }
 
-.tab-text {
+.h-tab-text {
     padding-left: 1rem;
 }
 
-.tab-digit {
+.h-tab-digit {
     border-right: solid 1px var(--text-color-white);
 }
 
-.tab-bar {
+.h-tab-bar {
     height: 1.5px;
     width: 100%;
     background: var(--tab-bar-background);
@@ -220,7 +221,7 @@ body:hover #mouse-follower {
 /* TAB Text */
 .tab-text {
     margin-left: 5%;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
 }
 
 .text-big {
@@ -232,6 +233,26 @@ body:hover #mouse-follower {
 .text-small {
     font-size: 1.25rem;
     font-weight: 400;
+}
+
+/* TAB Visuals */
+.visuals__left {
+    position: relative;
+    max-width: 50%;
+}
+
+
+.about-image-bg {
+    position: absolute;
+    top: -3%;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+    background: var(--vib-red-to-vib-orange-gradient);
+    box-shadow: -10px 10px 10px var(--color-red-dark);
+    transform: scale(1.2) rotate(-10deg);
+    border-radius: 5%;
 }
 
 /* ABOUT */
