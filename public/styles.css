@@ -12,6 +12,7 @@
     --radial-gradient-red: radial-gradient(circle at 0 0, var(--color-red-dark), transparent 40%);
     --radial-gradient-orange: radial-gradient(circle at 100% 0, var(--color-orange-dark), transparent 40%);
     --vib-red-to-vib-orange-gradient: linear-gradient(236deg, var(--color-red-vibrant) 20.53%, var(--color-orange-vibrant) 86.31%);
+
     /* sizes */
     --header-height: 4rem;
     /* borders */
@@ -97,7 +98,7 @@ body {
     overflow-x: hidden;
     background-color: var(--secondary-color-black);
     color: var(--text-color-white);
-
+    position: relative;
 }
 
 header {
@@ -247,6 +248,7 @@ body:hover #mouse-follower {
     top: 10px;
     z-index: 100;
 }
+
 .h-tab-after {
     margin: 0 8%;
 }
@@ -422,6 +424,17 @@ body:hover #mouse-follower {
     mix-blend-mode: screen;
     object-fit: cover;
     object-position: center;
+}
+
+/* BALL ANIMATION */
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    position: absolute;
+    z-index: -100;
+    filter: blur(30px);
 }
 
 /* TEST CSS */
