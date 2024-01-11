@@ -32,6 +32,10 @@
     font: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
 }
@@ -58,22 +62,6 @@ li {
     text-wrap: pretty;
 }
 
-/* SCROLL BEHAVIOR */
-html {
-    scroll-behavior: smooth;
-    /* scroll-padding-top: 4rem;
-    scroll-snap-type: y mandatory; */
-}
-
-/* #about,
-#hero{
-    scroll-snap-align: start;
-} */
-
-section {
-    height: 100vh;
-}
-
 /* BODY */
 body {
     min-height: 100svh;
@@ -82,6 +70,10 @@ body {
     background-color: var(--secondary-color-black);
     color: var(--text-color-white);
     position: relative;
+}
+
+section {
+    height: 100vh;
 }
 
 /* HEADER */
@@ -548,6 +540,7 @@ body:hover #mouse-follower {
     padding-bottom: 50px;
     font-weight: 600;
 }
+
 .members {
     --width: 250px;
     display: grid;
@@ -566,6 +559,7 @@ body:hover #mouse-follower {
     flex-direction: column;
     align-items: center;
 }
+
 .member-pane {
     width: 100%;
     height: 80%;
@@ -580,6 +574,7 @@ body:hover #mouse-follower {
     align-items: center;
     z-index: -1;
 }
+
 .profile-picture {
     height: 120px;
     width: 120px;
@@ -588,17 +583,20 @@ body:hover #mouse-follower {
     border-radius: 100px;
     overflow: hidden;
 }
+
 .member-name {
     margin-top: 30%;
     font-size: 36px;
     padding: 10px;
     color: var(--text-color-white)
 }
+
 .member-about {
     margin-bottom: 10%;
     font-size: 18px;
 }
-.profile-picture > img {
+
+.profile-picture>img {
     object-fit: cover;
     height: 100%;
     width: 100%;
