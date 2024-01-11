@@ -308,7 +308,7 @@ body:hover #mouse-follower {
     z-index: -1;
     background: var(--vib-red-to-vib-orange-gradient);
     box-shadow: -10px 10px 10px var(--color-red-dark);
-    transform: scale(1.2) rotate(-10deg);
+    transform: scale(1.2) ;
     border-radius: 5%;
 }
 
@@ -317,6 +317,7 @@ body:hover #mouse-follower {
     color: var(--color-red-dark);
     border-color: var(--color-red-dark);
 }
+
 
 .about__visuals {
     margin-left: 5%;
@@ -388,6 +389,10 @@ body:hover #mouse-follower {
 
 .work__visual-info {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 8px;
 }
 
 .work__visual-title {
