@@ -373,8 +373,9 @@ body:hover #mouse-follower {
 .work__visual-container {
     flex-grow: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 3rem;
+    padding: 0 1rem
 }
 
 .work__visual-frame {
@@ -413,6 +414,7 @@ body:hover #mouse-follower {
     border: 1px solid rgba(134, 134, 134, 0.10);
     border-radius: 10px;
     box-shadow: -10px 10px 25px 0px var(--color-orange-dark);
+    max-width: 30rem;
 }
 
 .work__visual-img {
