@@ -7,6 +7,7 @@
     --color-orange-vibrant: #ff7700;
     --text-color-white: #ffffff;
     --secondary-color-black: #010108;
+    --text-color-white-dark: #930000;
     /* gradients */
     --radial-gradient-red: radial-gradient(circle at 0 0, var(--color-red-dark), transparent 40%);
     --radial-gradient-orange: radial-gradient(circle at 100% 0, var(--color-orange-dark), transparent 40%);
@@ -53,10 +54,10 @@ h4 {
 p,
 li {
     max-width: 50ch;
-    text-wrap: prettu;
+    text-wrap: pretty;
 }
 
-/* SCROLL BEHAVIOUR */
+/* SCROLL BEHAVIOR */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
@@ -69,6 +70,25 @@ section {
 }
 
 /* BODY */
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    padding-top: 30px;
+}
+a {
+    text-decoration: none;
+    color: var(--text-color-white);
+    font-size: 20px;
+    font-weight: bold;
+}
+.header-child {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+}
+
 body {
     min-height: 100svh;
     font-family: Inter, sans-serif;
@@ -99,6 +119,7 @@ section {
     line-height: 1.2;
     font-size: 3rem;
     font-weight: 600;
+    text-align: center;
 }
 
 /* arrows */
@@ -108,6 +129,11 @@ section {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.scroll-text {
+    font-style: italic;
+    color: var(--text-color-white-dark);
 }
 
 .hero__arrows {
