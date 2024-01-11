@@ -98,8 +98,7 @@ body {
 
 }
 
-header,
-section {
+header {
     margin: 0 8%;
 }
 
@@ -107,7 +106,7 @@ section {
 #hero {
     height: 100vh;
     padding-top: 10vh;
-    gap: 20vh;
+    gap: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -120,6 +119,21 @@ section {
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
+    margin: 0 8%;
+}
+
+#number {
+    margin: 0;
+    font-size: 20vw;
+    font-style: italic;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--color-orange-vibrant), var(--color-red-vibrant), var(--color-orange-vibrant));
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientLoop 4s linear infinite;
 }
 
 /* arrows */
@@ -133,7 +147,8 @@ section {
 
 .scroll-text {
     font-style: italic;
-    color: var(--text-color-white-dark);
+    color: var(--color-red-vibrant);
+    opacity: 50%;
 }
 
 .hero__arrows {
@@ -165,6 +180,12 @@ section {
 
     100% {
         opacity: 0
+    }
+}
+
+@keyframes gradientLoop {
+    to {
+        background-position: 200% center;
     }
 }
 
@@ -212,10 +233,20 @@ body:hover #mouse-follower {
 }
 
 /* TAB BOILERPLATE */
+
 .h-tab {
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
+    width: 100vw;
+    background-color: rgb(1, 1, 8, 0.5);
+    padding: 24px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+.h-tab-after {
+    margin: 0 8%;
 }
 
 .h-tab-info {
