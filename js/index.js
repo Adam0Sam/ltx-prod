@@ -15,7 +15,7 @@ const loadBallAnimation = () => {
   const numSections = document.querySelectorAll("section").length - 1 - 1;
   const avgBallSize = 10; // in rem
   // number of balls present in the page
-  const numBalls = 100;
+  const numBalls = 50;
   const balls = [];
 
   for (let i = 0; i < numBalls; i++) {
@@ -31,9 +31,9 @@ const loadBallAnimation = () => {
     document.body.append(ball);
   }
 
-  const animationDuration = 2000; // (miliseconds)
+  const animationDuration = 5000; // (miliseconds)
   // Keyframes
-  const yDisplacement = 55; // in rem
+  const yDisplacement = 100; // in rem
   const xDisplacement = 110; // in rem
   balls.forEach((ball, id) => {
     const to = {
@@ -51,10 +51,25 @@ const loadBallAnimation = () => {
   });
 };
 
+const loadHamburger = () => {
+  const menuBtn = document.querySelector(".hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  const toggleClasses = () => {
+    menuBtn.classList.toggle("active");
+    mobileNav.classList.toggle("active");
+    document.body.classList.toggle("hide-overflow");
+  };
+  menuBtn.addEventListener("click", toggleClasses);
+  const links = document.querySelectorAll(".mobile-nav .nav-link");
+  links.forEach((link) => link.addEventListener("click", toggleClasses));
+};
+
 const loadPage = () => {
   loadMouseFollower();
   loadEventListeners();
   loadBallAnimation();
+  loadHamburger();
 };
 
 document.addEventListener("DOMContentLoaded", loadPage);

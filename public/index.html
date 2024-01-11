@@ -19,17 +19,33 @@
     <div class="background-gradient"></div>
     <div id="mouse-follower"></div>
 
-    <div id="header">
-        <div class="header-child">
-            <a href="#about">About</a>
-        </div>
-        <div class="header-child">
-            <a href="#work">Our work</a>
-        </div>
-        <div class="header-child">
-            <a href="#team">Meet the team</a>
-        </div>
-    </div>
+    <header id="header">
+        <nav class="desktop-nav">
+            <div class="nav-link-container">
+                <a class="nav-link" href="#about">About</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="#work">Our work</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="#team">Meet the team</a>
+            </div>
+        </nav>
+        <button class="hamburger">
+            <div class="ham-bar"></div>
+        </button>
+        <nav class="mobile-nav">
+            <div class="nav-link-container">
+                <a class="nav-link" href="#about">About</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="#work">Our work</a>
+            </div>
+            <div class="nav-link-container">
+                <a class="nav-link" href="#team">Meet the team</a>
+            </div>
+        </nav>
+    </header>
 
     <section id="hero">
         <h1 class="hero__text">
@@ -43,7 +59,7 @@
             <div class="hero__scroll">
                 <p class="scroll-text">
                     Scroll down to learn more
-            </p>
+                </p>
                 <svg class="hero__arrows">
                     <path class="arrow arrow-1" d="M0 0 L30 32 L60 0"></path>
                     <path class="arrow arrow-2" d="M0 20 L30 52 L60 20"></path>
@@ -63,13 +79,14 @@
         <div class="h-tab-after">
             <div class="tab-text about__text">
                 <h3 class="text-big about__text-big">
-                    We are a passionate <span class="text-gradient">group of students</span> dedicated to exploring 
-                    the fascinating world of robotics. 
-                    
+                    We are a passionate <span class="text-gradient">group of students</span> dedicated to exploring
+                    the fascinating world of robotics.
+
                 </h3>
                 <p class="text-small about__text-small">
-                    Our mission is to inspire <span class="text-gradient">inovation, creativity and collaboration</span> within the field of robotics, 
-                    pushing the boundaries of what's possible. From artificial intelligence and machine learning to 
+                    Our mission is to inspire <span class="text-gradient">inovation, creativity and collaboration</span>
+                    within the field of robotics,
+                    pushing the boundaries of what's possible. From artificial intelligence and machine learning to
                     hardware design and automation, we delve into the exciting realms that robotics has to offer.
                 </p>
             </div>
@@ -99,8 +116,8 @@
                 This is our <span class="text-gradient">project database</span>.
             </h3>
             <p class="text-small work__text-small">
-                Dive into a wealth of innovation and creativity as you explore 
-                our project database. Each entry represents a journey 
+                Dive into a wealth of innovation and creativity as you explore
+                our project database. Each entry represents a journey
                 of learning.
             </p>
         </div>
@@ -147,7 +164,7 @@
             </div>
             <div class="h-tab-bar about__tab-bar"></div>
         </div>
-            </section>
+    </section>
 </body>
 
 </html>
