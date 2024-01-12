@@ -214,6 +214,7 @@ body.hide-overflow {
 
 #number {
     margin: 0;
+    padding: 10px;
     font-size: 20vw;
     font-style: italic;
     font-weight: 700;
@@ -239,6 +240,7 @@ body.hide-overflow {
     font-style: italic;
     color: var(--color-red-vibrant);
     opacity: 50%;
+    text-decoration: none;
 }
 
 .hero__arrows {
@@ -338,6 +340,9 @@ body:hover #mouse-follower {
 
 .h-tab-after {
     margin: 0 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .h-tab-info {
@@ -389,17 +394,23 @@ body:hover #mouse-follower {
 
 
 .about-image-bg {
-    position: absolute;
-    top: -3%;
-    left: 0;
-    width: 100%;
+    padding: 10px;
+    width: 110%;
+    max-width: 500px;
     height: 110%;
+    max-height: 400px;
     z-index: -1;
     background: var(--vib-red-to-vib-orange-gradient);
     box-shadow: -10px 10px 10px var(--color-red-dark);
     transform: scale(1.2);
-    border-radius: 5%;
+    border-radius: 16px;
 }
+.about-image > img {
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 10px;
+}
+
 
 /* ABOUT */
 .about__tab-digit {
@@ -502,17 +513,18 @@ body:hover #mouse-follower {
 /* work image */
 .work__visual-img-container {
     padding: 1rem;
-    background-color: #171E25;
+    background: var(--vib-red-to-vib-orange-gradient);
     border: 1px solid rgba(134, 134, 134, 0.10);
     border-radius: 10px;
     box-shadow: -10px 10px 25px 0px var(--color-orange-dark);
     max-width: 30rem;
+    border-radius: 16px;
 }
 
 .work__visual-img {
-    mix-blend-mode: screen;
     object-fit: cover;
     object-position: center;
+    border-radius: 12px;
 }
 
 /* BALL ANIMATION */
