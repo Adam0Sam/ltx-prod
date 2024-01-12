@@ -15,7 +15,7 @@ const loadBallAnimation = () => {
   const numSections = document.querySelectorAll("section").length - 1 - 1;
   const avgBallSize = 10; // in rem
   // number of balls present in the page
-  const numBalls = 50;
+  const numBalls = 70;
   const balls = [];
 
   for (let i = 0; i < numBalls; i++) {
@@ -33,7 +33,7 @@ const loadBallAnimation = () => {
 
   const animationDuration = 5000; // (miliseconds)
   // Keyframes
-  const yDisplacement = 100; // in rem
+  const yDisplacement = 150; // in rem
   const xDisplacement = 110; // in rem
   balls.forEach((ball, id) => {
     const to = {
